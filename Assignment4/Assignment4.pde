@@ -11,6 +11,7 @@
 
 PImage img;
 PImage imgSearch;
+PImage imgControl;
 
 void setup() {
   size(1000, 1000);
@@ -19,13 +20,15 @@ void setup() {
   
   img = loadImage("../img/pixel.png");
   imgSearch = loadImage("../img/search.PNG");
+  imgControl = loadImage("../img/control.png");
 }
 
 void draw() {
-  background(255);
+  background(38);
   image(img, 0, 0, 1000, 1000);
   
-  fill(38);
+  fill(25, 75, 255);
   rect(312, 156, 373, 658);
-  image(imgSearch, 350, 700, 300, 40);
+  image(imgSearch, 312, 718, 373, 50);
+  image(imgControl, 312, 700, 373, 115);
 }
