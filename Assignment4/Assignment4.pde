@@ -14,6 +14,7 @@ String ampm;
 PImage img;
 PImage imgSearch;
 PImage imgControl;
+PImage imgFB;
 
 void setup() {
   size(1000, 1000);
@@ -23,12 +24,13 @@ void setup() {
   img = loadImage("../img/pixel.png");
   imgSearch = loadImage("../img/search.PNG");
   imgControl = loadImage("../img/control.png");
+  imgFB = loadImage("../img/facebook.png");
 }
 
 void draw() {
   background(38);
   image(img, 0, 0, 1000, 1000);
-  fill(25, 75, 255);
+  fill(0, 100, 255);
   rect(312, 156, 373, 658);
   
   // Place current time at top
@@ -52,6 +54,7 @@ void draw() {
     }
   }
   
+  image(imgFB, 312, 500, 65, 50);
   image(imgSearch, 318, 718, 360, 50);
   image(imgControl, 312, 700, 373, 115);
 }
