@@ -1,8 +1,3 @@
-// Christian Garcia
-// CS 484
-// Assignment 2
-// Fedruary 9, 2018
-
 // Font/image variables
 // Christian Garcia
 // CS 484
@@ -30,8 +25,10 @@ void setup() {
 void draw() {
   background(38);
   image(img, 0, 0, 1000, 1000);
-  fill(0, 100, 255);
+  fill(#F44336);
   rect(312, 156, 373, 658);
+  fill(38);
+  rect(312, 156, 373, 25);
   
   // Place current time at top
   fill(255);
@@ -42,19 +39,26 @@ void draw() {
   
   if(hour( ) - 12 > 0) {
     if(minute() < 10) {
-      text((hour() - 12) + ":0" + minute() + ampm, 500, 100);
+      text((hour() - 12) + ":0" + minute() + ampm, 460,175);
     } else {
       text((hour() - 12) + ":" + minute() + ampm, 460, 175);
     }
   } else {
     if(minute() < 10) {
-      text((hour()) + ":0" + minute() + ampm, 25, 50);
+      text((hour()) + ":0" + minute() + ampm, 460, 175);
     } else {
-      text((hour()) + ":" + minute() + ampm, 25, 50);
+      text((hour()) + ":" + minute() + ampm, 460, 175);
     }
   }
   
-  image(imgFB, 312, 500, 65, 50);
+  image(imgFB, 340, 500, 65, 50);
+  image(imgFB, 430, 500, 65, 50);
+  image(imgFB, 510, 500, 65, 50);
+  image(imgFB, 590, 500, 65, 50);
+  image(imgFB, 340, 600, 65, 50);
+  image(imgFB, 430, 600, 65, 50);
+  image(imgFB, 510, 600, 65, 50);
+  image(imgFB, 590, 600, 65, 50);
   image(imgSearch, 318, 718, 360, 50);
   image(imgControl, 312, 700, 373, 115);
 }
