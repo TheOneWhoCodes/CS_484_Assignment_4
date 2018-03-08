@@ -19,6 +19,12 @@ PImage imgInsta;
 PImage imgPhotos;
 PImage imgSMS;
 PImage imgPhone;
+PImage imgGMail;
+PImage imgChrome;
+PImage imgLArrow;
+PImage imgRArrow;
+PImage imgBat;
+PImage imgBars;
 
 void setup() {
   size(1000, 1000);
@@ -38,6 +44,12 @@ void setup() {
   imgPhotos = loadImage("../img/photos.png");
   imgSMS = loadImage("../img/sms.png");
   imgPhone = loadImage("../img/phone.png");
+  imgGMail = loadImage("../img/gmail.png");
+  imgChrome = loadImage("../img/chrome.png");
+  imgLArrow = loadImage("../img/larrow.png");
+  imgRArrow = loadImage("../img/rarrow.png");
+  imgBat = loadImage("../img/bat.png");
+  imgBars = loadImage("../img/bars.png");
 }
 
 void draw() {
@@ -72,10 +84,17 @@ void draw() {
   textSize(24);
   text("Wednesday, April 21", 380, 300);
   textSize(18);
-  text("49 °F",380,350); 
-  
+  text("49 °F",398,330); 
+   text("|   Next: CS 484", 464,330); 
+   
+  image(imgBat, 660, 160, 15, 15);
+  image(imgBars, 660, 160, 15, 15);
+  image(imgLArrow, 315, 350, 50, 40);
+  image(imgRArrow, 635, 349, 50, 42);
+  image(imgSMS, 321, 400, 65, 50);
+  image(imgChrome, 420, 403, 50, 50);
+  image(imgGMail, 530, 407, 50, 43);
   image(imgPhone, 630, 400, 50, 50);
-  image(imgSMS, 320, 400, 65, 50);
   image(imgFB, 340, 500, 65, 50);
   image(imgSnapchat, 435, 502, 47, 47);
   image(imgLinkedIn, 517, 501, 50, 50);
