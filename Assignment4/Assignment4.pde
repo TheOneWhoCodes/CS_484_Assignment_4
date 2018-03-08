@@ -97,7 +97,7 @@ void draw() {
   text("49 °F",398,330); 
    text("|   Next: CS 484", 464,330); 
    
-  image(imgSun, 450, 225, 100, 100);
+  image(imgSun, 448, 225, 100, 100);
   image(imgBat, 660, 160, 15, 15);
   image(imgBars, 660, 160, 15, 15);
   image(imgLArrow, 315, 350, 50, 40);
@@ -116,4 +116,16 @@ void draw() {
   image(imgPhotos, 600, 600, 50, 50);
   image(imgSearch, 318, 718, 360, 50);
   image(imgControl, 312, 700, 373, 115);
+}
+
+void mouseClicked() {
+  if (mouseX >= 350 && mouseX <= 650 && mouseY >= 500 && mouseY <= 575 && showFB == false) {
+    showHome = false;
+    showFB = true;
+  }
+  
+  else if (mouseX >= 800 && mouseX <= 950 && mouseY >= 900 && mouseY <= 975 && showFB == true) {
+    showHome = true;
+    showFB = false;
+  }
 }
