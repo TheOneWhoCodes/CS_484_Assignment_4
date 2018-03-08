@@ -4,6 +4,7 @@
 // Assignment 4
 // March 9, 2018
 
+// Global variables
 String ampm;
 
 PImage img;
@@ -31,6 +32,7 @@ PImage imgFBLogin;
 boolean showHome;
 boolean showFB;
 
+// Initialize all variables
 void setup() {
   size(1000, 1000);
   noStroke();
@@ -63,44 +65,24 @@ void setup() {
 }
 
 void draw() {
+  background(38);
+  
+  // Draw Pixel mockup
+  image(img, 0, 0, 1000, 1000);
+  
+  // Draw homescreen
   if(showHome == true) {
-    background(38);
-    image(img, 0, 0, 1000, 1000);
     fill(#B71C1C);
     rect(312, 156, 373, 658);
-    fill(38);
-    rect(312, 156, 373, 25);
-    
-    // Place current time at top
+
     fill(255);
-    textSize(18);
-    if(hour() > 11) {
-      ampm = " PM";
-    }
-    
-    if(hour( ) - 12 > 0) {
-      if(minute() < 10) {
-        text((hour() - 12) + ":0" + minute() + ampm, 460,175);
-      } else {
-        text((hour() - 12) + ":" + minute() + ampm, 460, 175);
-      }
-    } else {
-      if(minute() < 10) {
-        text((hour()) + ":0" + minute() + ampm, 460, 175);
-      } else {
-        text((hour()) + ":" + minute() + ampm, 460, 175);
-      }
-    }
-    
     textSize(24);
     text("Wednesday, April 21", 380, 300);
     textSize(18);
     text("49 °F",398,330); 
-     text("|   Next: CS 484", 464,330); 
+    text("|   Next: CS 484", 464,330); 
      
     image(imgSun, 448, 225, 100, 100);
-    image(imgBat, 660, 160, 15, 15);
-    image(imgBars, 660, 160, 15, 15);
     image(imgLArrow, 315, 350, 50, 40);
     image(imgRArrow, 635, 349, 50, 42);
     image(imgSMS, 321, 400, 65, 50);
@@ -116,26 +98,54 @@ void draw() {
     image(imgInsta, 517, 600, 50, 50);
     image(imgPhotos, 600, 600, 50, 50);
     image(imgSearch, 318, 718, 360, 50);
-    image(imgControl, 312, 700, 373, 115);
   }
   
+  // Draw Facebook login screen
   else if(showFB == true) {
-    background(38);
-    image(img, 0, 0, 1000, 1000);
-    fill(#B71C1C);
-    rect(312, 156, 373, 658);
-    fill(38);
-    rect(312, 156, 373, 25);
+    image(imgFBLogin, 312, 156, 373, 658);
   }
+  
+  // Information bar at top
+  fill(38);
+  rect(312, 156, 373, 25);
+  
+  // Place current time in info bar
+  fill(255);
+  textSize(18);
+  if(hour() > 11) {
+    ampm = " PM";
+  }
+    
+  if(hour( ) - 12 > 0) {
+    if(minute() < 10) {
+      text((hour() - 12) + ":0" + minute() + ampm, 460,175);
+    } else {
+      text((hour() - 12) + ":" + minute() + ampm, 460, 175);
+    }
+  } else {
+    if(minute() < 10) {
+      text((hour()) + ":0" + minute() + ampm, 460, 175);
+    } else {
+      text((hour()) + ":" + minute() + ampm, 460, 175);
+    }
+  }
+  
+  // Battery and signal icons
+  image(imgBat, 660, 160, 15, 15);
+  image(imgBars, 640, 160, 15, 15);
+  
+  // Android control buttons (bottom)
+  image(imgControl, 312, 700, 373, 115);
 }
 
+// Control Facebook login view
 void mouseClicked() {
   if (mouseX >= 340 && mouseX <= 405 && mouseY >= 500 && mouseY <= 550 && showFB == false) {
     showHome = false;
     showFB = true;
   }
   
-  else if (mouseX >= 800 && mouseX <= 950 && mouseY >= 900 && mouseY <= 975 && showFB == true) {
+  else if (mouseX >= 350 && mouseX <= 400 && mouseY >= 700 && mouseY <= 815 && showFB == true) {
     showHome = true;
     showFB = false;
   }
