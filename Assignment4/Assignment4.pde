@@ -10,6 +10,10 @@ PImage img;
 PImage imgSearch;
 PImage imgControl;
 PImage imgFB;
+PImage imgSnapchat;
+PImage imgLinkedIn;
+PImage imgTwitter;
+PImage imgSpotify;
 
 void setup() {
   size(1000, 1000);
@@ -20,6 +24,10 @@ void setup() {
   imgSearch = loadImage("../img/search.PNG");
   imgControl = loadImage("../img/control.png");
   imgFB = loadImage("../img/facebook.png");
+  imgSnapchat = loadImage("../img/snapchat.png");
+  imgLinkedIn = loadImage("../img/linkedin.png");
+  imgTwitter = loadImage("../img/twitter.png");
+  imgSpotify = loadImage("../img/spotify.png");
 }
 
 void draw() {
@@ -52,11 +60,11 @@ void draw() {
   }
   
   image(imgFB, 340, 500, 65, 50);
-  image(imgFB, 430, 500, 65, 50);
-  image(imgFB, 510, 500, 65, 50);
-  image(imgFB, 590, 500, 65, 50);
-  image(imgFB, 340, 600, 65, 50);
-  image(imgFB, 430, 600, 65, 50);
+  image(imgSnapchat, 435, 502, 47, 47);
+  image(imgLinkedIn, 517, 501, 50, 50);
+  image(imgTwitter, 598, 500, 50, 50);
+  image(imgSpotify, 340, 600, 65, 50);
+  image(imgFB, 426, 600, 65, 50);
   image(imgFB, 510, 600, 65, 50);
   image(imgFB, 590, 600, 65, 50);
   image(imgSearch, 318, 718, 360, 50);
