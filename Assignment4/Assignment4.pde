@@ -25,11 +25,19 @@ PImage imgLArrow;
 PImage imgRArrow;
 PImage imgBat;
 PImage imgBars;
+PImage imgSun;
+PImage imgFBLogin;
+
+boolean showHome;
+boolean showFB;
 
 void setup() {
   size(1000, 1000);
   noStroke();
   noLoop();
+  
+  showHome = true;
+  showFB = false;
   
   img = loadImage("../img/pixel.png");
   imgSearch = loadImage("../img/search.PNG");
@@ -50,6 +58,8 @@ void setup() {
   imgRArrow = loadImage("../img/rarrow.png");
   imgBat = loadImage("../img/bat.png");
   imgBars = loadImage("../img/bars.png");
+  imgSun = loadImage("../img/sun.png");
+  imgFBLogin = loadImage("../img/fblogin.png");
 }
 
 void draw() {
@@ -87,6 +97,7 @@ void draw() {
   text("49 °F",398,330); 
    text("|   Next: CS 484", 464,330); 
    
+  image(imgSun, 450, 225, 100, 100);
   image(imgBat, 660, 160, 15, 15);
   image(imgBars, 660, 160, 15, 15);
   image(imgLArrow, 315, 350, 50, 40);
